@@ -1,0 +1,50 @@
+<!--{% load staticfiles %}-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+		<!--<link rel="stylesheet" href="{% static 'css/base.css' %}" charset="utf-8"> -->
+</head>
+<body ng-app="frontendApp" ng-controller="profilesCtrl">
+	<p>if user is visiting</p>
+	<div id="viewer">
+		<div class="main">
+			User Name: {{ uName }} <br/>
+			First Name: {{ fName }} <br/>
+			Last Name: {{ lName }} <br/>
+			Email: {{ email }} <br/>
+			Github Account: {{ gitId }} <br/>
+		</div>
+	</div>
+
+	<hr/>
+
+	<p>if user is owner</p>
+	<div id="owner">
+		<div class="main">
+			<form action="">
+				User Name: <input type="text" value="{{ uName }}"></br>
+				First Name: <input type="text" value="{{ fName }}"></br>
+				Last Name: <input type="text" value="{{ lName }}"></br>
+				Email: <input type="text" value="{{ email }}"></br>
+				Github Account: <input type="text" value="{{ gitId }}"></br>
+				<input type="submit" value="Update">
+			</form>
+		</div>
+	</div>
+
+	<!--<div id="followers">
+		<ul style="list-style-type:none;" ng-repeat="user in followers by uId">
+			<li> {{ user.uName }} </li>
+		</ul>
+	</div>
+
+	<div id="following">
+		<ul style="list-style-type:none;" ng-repeat="user in following by uID">
+			<li> {{ user.uName }} </li>
+		</ul>
+	</div>
+	-->
+    <script src='scripts/controllers/profiles.js'>
+</body>
+</html>

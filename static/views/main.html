@@ -1,0 +1,39 @@
+<!--{% load staticfiles %}-->
+<!DOCTYPE html>
+<html ng-app="frontendApp">
+  <head>
+    <title>Main</title>
+   <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}" charset="utf-8">-->
+    <!-- AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+  </head>
+  <body>
+    <h1>Main Page</h1>
+    <input type="text" name="newPost" placeholder="What's on your mind?">
+    <button type="button" onclick="" name="toPost">Post</button>
+
+    <div id="mainStream" ng-controller="PostCtrl">
+      <p>Main Stream </p> <br/>
+
+        <div ng-repeat="post in postings">
+          <post-info info="post"></post-info>
+        </div>
+
+    </div>
+
+    <div id="gitStream">
+      <p>Git Stream </p>
+    </div>
+
+
+
+    <script src='scripts/app.js'></script>
+    <script src='scripts/controllers/posting.js'></script>
+    <script src='scripts/controllers/main.js'></script>
+    <script src='scripts/controllers/profiles.js'></script>
+
+    <script src='scripts/directives/post.js'></script>
+    <script src='scripts/directives/post.html'></script>
+
+  </body>
+</html>
