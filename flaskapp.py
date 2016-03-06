@@ -18,5 +18,9 @@ def serveStaticResource(resource):
 def test():
     return "<strong>It's Alive!</strong>"
 
+@app.route("/nurse")
+def nurse():
+	return render_template('nurse.html')
+
 if __name__ == '__main__':
     app.run()
